@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>note構成AI | テーマを入れるだけで見出し構成を自動生成</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', sans-serif;
+    color: #1a1a2e;
+    line-height: 1.7;
+    background: #fafdfb;
+  }
+  a { text-decoration: none; }
+  .hero {
+    background: linear-gradient(135deg, #0f9b6c 0%, #0d7a53 40%, #05403f 100%);
+    color: #fff;
+    padding: 100px 20px 90px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .hero p.sub {
+    font-size: clamp(15px, 2.2vw, 19px);
+    opacity: 0.92;
+    max-width: 620px;
+    margin: 0 auto 36px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #0d7a53;
+    font-weight: 700;
+    padding: 16px 38px;
+    border-radius: 999px;
+    font-size: 17px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease;
+  }
+  .cta-btn:hover { transform: translateY(-3px); }
+  section { padding: 70px 20px; max-width: 900px; margin: 0 auto; }
+  h2.section-title {
+    font-size: clamp(22px, 3.5vw, 30px);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 46px;
+    color: #0d7a53;
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .pain-card {
+    background: #fff;
+    border: 1px solid #e4f1ec;
+    border-radius: 16px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(13,122,83,0.06);
+  }
+  .pain-card .icon { font-size: 34px; margin-bottom: 14px; }
+  .pain-card p { font-size: 15px; color: #444; }
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .feature-card {
+    background: linear-gradient(135deg, #ffffff, #f1faf6);
+    border-radius: 16px;
+    padding: 26px;
+    border-left: 5px solid #0f9b6c;
+    box-shadow: 0 6px 18px rgba(13,122,83,0.06);
+  }
+  .feature-card .icon { font-size: 28px; margin-bottom: 10px; }
+  .feature-card h3 { font-size: 17px; margin-bottom: 8px; color: #0d7a53; }
+  .feature-card p { font-size: 14px; color: #555; }
+  .pricing {
+    background: linear-gradient(135deg, #eafaf3, #ffffff);
+    border-radius: 24px;
+    padding: 50px 30px;
+    text-align: center;
+    border: 2px solid #0f9b6c;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .price {
+    font-size: 46px;
+    font-weight: 800;
+    color: #0d7a53;
+    margin: 14px 0;
+  }
+  .price span { font-size: 16px; font-weight: 500; }
+  .plan-name { font-size: 15px; letter-spacing: 0.1em; color: #0f9b6c; font-weight: 700; }
+  .plan-desc { font-size: 14px; color: #555; margin: 18px 0 26px; }
+  .cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #0f9b6c, #05403f);
+    color: #fff;
+    padding: 80px 20px;
+  }
+  .cta-section h2 { font-size: clamp(22px,4vw,32px); margin-bottom: 16px; font-weight: 800; }
+  .cta-section p { margin-bottom: 34px; opacity: 0.9; }
+  footer {
+    text-align: center;
+    padding: 34px 20px;
+    background: #05231d;
+    color: #a8d8c6;
+    font-size: 13px;
+  }
+  @media (max-width: 640px) {
+    .pain-grid, .feature-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="badge">📝 AI × note運用効率化</span>
+  <h1>テーマを1行入れるだけ。<br>note記事の「構成」をAIが3分で作ります。</h1>
+  <p class="sub">見出し構成・アウトライン・導入文の切り口まで自動生成。「何を書くか」で悩む時間をゼロにして、執筆スピードを2倍にする構成特化AIツール。</p>
+  <a class="cta-btn" href="https://note-outline-jp.fly.dev/" target="_blank">無料で今すぐ試す（無料体験版）</a>
+</div>
+
+<section>
+  <h2 class="section-title">こんな悩みありませんか？</h2>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="icon">😵</div>
+      <p>note記事を書きたいのに、構成を考える時間が一番かかって続かない</p>
+    </div>
+    <div class="pain-card">
+      <div class="icon">📉</div>
+      <p>見出しがバラバラで読まれない・最後まで読了されない記事になりがち</p>
+    </div>
+    <div class="pain-card">
+      <div class="icon">⏰</div>
+      <p>毎回ゼロから考えるのが面倒で、投稿頻度が落ちてしまう</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">主な機能</h2>
+  <div class="feature-list">
+    <div class="feature-card">
+      <div class="icon">✨</div>
+      <h3>テーマ入力だけで構成生成</h3>
+      <p>キーワードやテーマを1行入力するだけで、読まれる見出し構成案を自動作成します。</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🧩</div>
+      <h3>複数パターン提案</h3>
+      <p>ハウツー型・体験談型・リスト型など、目的に合わせた構成パターンを複数提示。</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎯</div>
+      <h3>読了率を意識した設計</h3>
+      <p>note・ブログで実績のある「離脱しにくい」構成テンプレートをベースに生成。</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📋</div>
+      <h3>コピペで即使える出力</h3>
+      <p>生成結果はそのままnoteエディタに貼り付け可能な形式で出力されます。</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔁</div>
+      <h3>シリーズ企画にも対応</h3>
+      <p>連載・シリーズ記事のテーマ出しや全体構成の設計もまとめてサポート。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">料金プラン</h2>
+  <div class="pricing">
+    <div class="plan-name">スタンダードプラン</div>
+    <div class="price">¥1,480<span>/月</span></div>
+    <div class="plan-desc">構成生成し放題・出力テンプレート全種利用可能<br>先行登録者は初月無料でご案内予定</div>
+    <a class="cta-btn" style="background:#0f9b6c;color:#fff;" href="https://note-outline-jp.fly.dev/" target="_blank">無料で今すぐ試す（無料体験版）</a>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>まずは先行登録で優先案内を受け取る</h2>
+  <p>正式リリース前の先行登録者には特典価格でご案内します。</p>
+  <a class="cta-btn" href="https://note-outline-jp.fly.dev/" target="_blank">無料で今すぐ試す（無料体験版）</a>
+</div>
+
+<footer>
+  © 2026 note構成AI. All rights reserved.
+</footer>
+
+</body>
+</html>
